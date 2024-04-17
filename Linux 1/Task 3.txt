@@ -1,0 +1,22 @@
+1. Add user
+
+sudo useradd user2
+
+2. Password
+
+sudo passwd user2
+
+3. Посмотрите новые строки во всех четырех файлах аутентификации (passwd, shadow, group, и gshadow), чтобы убедиться, что учетная запись user2 была успешно создана:
+ 
+grep user2 /etc/passwd /etc/shadow /etc/group /etc/gshadow
+
+4. Измените имя входа, UID, домашний каталог и оболочку входа для пользователя user2:
+sudo usermod -l user2new -u 2000 -d /home/user2new -s /sbin/nologin user2
+
+5.Эта команда выполнит поиск строки "user2new" в файле /etc/passwd и выведет все строки, содержащие это совпадение.
+
+grep user2new /etc/passwd
+
+6. Delete
+
+sudo userdel user2new

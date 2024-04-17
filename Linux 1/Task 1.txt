@@ -1,0 +1,19 @@
+1. Create (-c) a gzip-compressed (-z) tarball under /tmp (-f) for /home:
+tar -czf /tmp/home.tar.gz /home
+
+2.Create (-c) a bzip2-compressed (-j) tarball under /tmp (-f) for /home
+tar -cjf /tmp/home.tar.bz2 /home
+
+3. List (-t) the content of the gzip-compressed archive (-f) without
+uncompressing it
+
+tar -tf tmp/home.tar.gz
+
+4. Extract files from the gzip in the current directory
+ 
+tar -xf /tmp/home.tar.gz
+
+5.Extract files from the bzip2 under /tmp (a
+different directory location) (-C)
+
+tar -xf /tmp/home.tar.bz2 -C /tmp

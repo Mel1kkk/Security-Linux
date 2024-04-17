@@ -1,0 +1,15 @@
+1. Add an execute bit for the owner:
+
+chmod -v 544 permfile2
+
+2. Add a write permission bit for group and public:
+
+chmod -v 566 permfile2
+
+3. Revoke the write bit for public
+
+chmod -v 564 permfile2
+
+4. Assign read, write and execute permission bits to all three user categories
+
+chmod 777 -v permfile2
